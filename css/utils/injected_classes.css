@@ -1,0 +1,15 @@
+/* ------------------ */
+/* Classes injectées */
+/* ------------------ */
+.blue {
+    color: var(--blue);
+}
+
+.grey {
+    color: var(--medium_grey);
+}
+
+.bold {
+    font-weight: bold;
+}
+/* ------------------ */

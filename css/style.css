@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700;800;900&display=swap");
+
+@import url(./base/html.css);
+
+@import url(./utils/variables.css);
+@import url(./utils/injected_classes.css);
+
+@import url(./layout/header.css);
+@import url(./layout/search.css);
+@import url(./layout/section_one.css);
+@import url(./layout/section_two.css);
+@import url(./layout/footer.css);
+
+@import url(./animations/header_anim.css);
+@import url(./animations/search_anim.css);
+@import url(./animations/section_card_anim.css);
+
+@import url(./media_queries/desktop.css);
+@import url(./media_queries/tablet.css);
+@import url(./media_queries/mobile.css);
+@import url(./animations/media_query_mobile_anim.css);
+
+
+

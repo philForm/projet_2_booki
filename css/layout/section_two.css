@@ -1,0 +1,96 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* .section-two .contain-article, */
+
+.section-two .activity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-flow: column wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    width: 100%;
+    height: 433px;
+}
+
+.section-two .card-activ {
+    position: relative;
+    width: 22.5%;
+    -webkit-filter: drop-shadow(var(--shadow));
+    filter: drop-shadow(var(--shadow));
+}
+
+.card-activ .card-activ__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-activ-1 .card-activ__image,
+.card-activ-4 .card-activ__image {
+    height: 433px;
+}
+
+.card-activ-2 .card-activ__image {
+    height: 230px;
+}
+
+.card-activ-3 .card-activ__image {
+    height: 164px;
+}
+
+.card-activ-5 .card-activ__image {
+    height: 192px;
+}
+
+.card-activ-6 .card-activ__image {
+    height: 202px;
+}
+
+.card-accomm img,
+.card-popular__image > img,
+.card-activ__image img {
+    width: 100%;
+    height: 100%;
+    /* conserve les proportions de l'image */
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.card-activ .card-activ__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    padding: 0 16px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 54px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+
+.card-activ h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}

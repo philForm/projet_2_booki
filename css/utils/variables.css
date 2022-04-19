@@ -1,0 +1,12 @@
+/* -------------------
+/* Liste des variables */
+/* ------------------- */
+:root {
+    --light_grey: #f2f2f2;
+    --medium_grey: #e3e3e3;
+    --light_blue: #deebff;
+    --blue: #0065fc;
+    --shadow: 0px 0px 6px rgba(158, 158, 158, 0.8);
+    --form_height: 5rem;
+}
+/* ------------------- */

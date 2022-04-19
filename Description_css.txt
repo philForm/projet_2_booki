@@ -1,0 +1,133 @@
+* utilisation de autoprefixer pour les préfixes
+
+===== html.css =====
+    
+    * ::before, ;;after : reinitialisation sur tous les éléments.
+    * box-sizing : pour que les bordures n'agrandissent pas les éléments
+    
+    * sur toute la page : 
+        font-size:62.5% : pour que 1rem == 10px
+    
+    * Les conteneurs principaux sont en flex et orienté en colonne.
+    
+    * gap : espace entre le items flex
+    
+    * bloc-page :
+        margin:auto ; centre bloc-page
+        
+===== header =====
+
+    * en flex
+    * justify-content: space-between :
+        place le logo à gauche et la navigation à droite
+        
+    * logo Booki en position: relative :
+        pour le positionner par rapport à sa position d'origine
+        
+    * .header__nav a :
+        inline-bloc : pour pouvoir donner un comportement bloc à des éléments inline.
+                    pour pouvoir les positionner, leur donner une taille, des marges, des padding ...
+                    
+    * .nav (lien de navigation)
+        position: relative :
+            pour positionner le pseudo-élément ::after qui est en position absolute
+            et qui est l'enfant de .nav
+            * ::after sert à l'animation du surlignage bleu
+            
+===== search =====
+
+    * en flex, direction en colonne
+    
+    * .search__form : position: relative :
+        pour positionner le bouton rechercher qui est en position absolute
+        
+    * form div:first child : contient l'icone de situation
+    
+    * .search__form button span:last-child :
+        display: none : cache l'icone de loupe
+        
+    * .search__form :
+        aucune nécéssité, corrigé !!!
+    
+    * .search__form input:focus :
+        outline: none; retire le focus de input
+        
+===== search filters =====
+
+    * .search__filter en flex, wrap, align-items: center :
+        alignement horizontal du Titre et du conteneur des filtres
+        
+    * .filter-elt : conteneur des filtres :
+        en flex et wrap
+        
+    * .filter : position relative :
+        pour positionner le conteneur de l'icone qui est en absolute
+        
+    * .filter__icon : conteneur de l'icone :
+        flex, just-cont:center, align-items:center :
+            centre l'icone sur l'axe horizontal et vertical.
+            
+    * .filter__btn : bouton du filtre :
+        display: inline-block : inutile !!!
+        
+    * .search__title .info : conteneur de l'icone "information"
+        centrer l'icone (flex, center ...),
+        float: left : pour que le texte entoure l'icone au wrap
+        
+==== section-one =====
+
+    !!! rectification !!! la couleur white est appliquée uniquement sur le conteneur des cartes :
+        .card-accomm,
+        .card-popular
+        
+    * .card-accomm : position: relative :
+        pour positionner les étoiles
+        
+    * .section-one : flex :
+        pour rendre flexibles les bloc hébergement et plus populaires
+        
+    * .section-one > .contain-article:first-child :
+        min-with: 66% : le bloc hébergement occupe au minimum 66% en largeur
+    
+    * .contain-article > a :
+        !!! rectification !!! display: inline-bloc : INUTILE, color:black : INUTILE
+        
+    * .accommodation (conteneur dea cartes hébérgements) :
+        flex, wrap, flex-between
+
+    * .card-accomm__image : image de la carte hébergement :
+        !!! rectification !!! : border white à transparent !!!
+        
+    * .card-accomm__text :
+        !!! rectification !!! background-color: white; INUTILE
+        !!! rectification !!! border-radius: INUTILE
+        
+    * .aside-title (titre plus populaire et icone) :
+        flex, space-between, align-items: baseline :
+            alignement des éléments sur la base du texte
+            
+    * .aside-title img (svg icone flèche)
+
+    * .aside-title i !!! rectification !!! INUTILE
+    
+    * .card-popular : flex image de la carte et le texte en ligne
+    
+    * .card-popular__image :
+        !!! rectification !!! border: transparent
+        
+    * .card-popular__text :
+        !!! rectification !!! background-color: white; INUTILE
+        !!! rectification !!! border-radius: 0 20px 20px 0; INUTILE
+        
+==== section-two =====
+
+    .section-two .activity : flex: column wrap :
+        .activity a une hauteur fixe.
+        les cartes grace à l'effet wrap se repartissent sur 4 colonnes.
+        
+    .card...__image :
+        l'image s'adapte selon les circonstances en hauteur ou en largeur
+        width: 100%;
+        height: 100%;
+        conserve les proportions de l'image
+        object-fit: cover;

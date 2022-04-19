@@ -1,0 +1,200 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* MODE MOBILES */
+
+@media all and (max-width: 768px) {
+    .bloc-page {
+        width: 100%;
+        margin: auto;
+    }
+    .section-two,
+    .search {
+        width: 93%;
+        margin: auto;
+    }
+    /* ------------------------------------------------------------------------------ */
+    /* Le logo Booki et la navigation sont centrés.                                   */
+    /* Au :hover sur les liens de navigation, la border bleue apparait sous les liens */
+    /* ------------------------------------------------------------------------------ */
+    .header {
+        position: relative;
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .header__nav {
+        width: 100%;
+    }
+
+    .header__nav ul {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        width: 100%;
+        gap: 0;
+    }
+
+    .header__nav li {
+        width: 50%;
+    }
+    .header__nav li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* création du pseudo élément trait gris clair sous la navigation */
+    .header::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--light_grey);
+        bottom: 0;
+        z-index: -1;
+    }
+
+    /* Création d'une pseudo-bordure transparente sous la navigation */
+    .nav::after {
+        border-bottom: 3px solid transparent;
+        border-top: none;
+        bottom: 0;
+    }
+
+    /* ----------------------------------------------------------------------------------------- */
+    /* Le bouton du formulaire "Rechercher" devient carré, et le texte du bouton laisse la place à une icone de loupe */
+    /* ----------------------------------------------------------------------------------------- */
+    .search__form button {
+        width: var(--form_height);
+        min-width: 0;
+        border-radius: 10px;
+    }
+
+    .search__form button span:first-child {
+        display: none;
+    }
+    .search__form button span:last-child {
+        display: block;
+    }
+    /* ------------------------------------------------------ */
+    /* ========================================== */
+    /* section 1, hébergements et plus populaires */
+    /* ========================================== */
+    .card-popular {
+        width: 100%;
+    }
+    .card-accomm {
+        width: 100%;
+    }
+    /* ==================== */
+    /* section 2, activités */
+    /* ==================== */
+    .section-two .card-activ {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    }
+    /* "hébergements" : suppression du fond gris clair */
+    .section-one .section-one__accomm {
+        background-color: transparent;
+    }
+    /* "plus populaires" */
+    .section-one .section-one__aside {
+        border-radius: 0;
+    }
+
+    .footer .bloc-page {
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        gap: 1rem;
+        width: 93%;
+    }
+}
+
+@media all and (max-width: 400px) {
+    /* ------------------------------ */
+    /* Les éléments du formulaire se retractent au responsive */
+    /* ------------------------------ */
+    .search__form form {
+        width: 50%;
+    }
+    .search__form button {
+        left: 75%;
+    }
+    .search__form input {
+        min-width: 132%;
+    }
+    .filter__btn {
+        font-size: 1.6rem;
+    }
+    /* ------------------------------ */
+}
+/* ++++++++++++ */
+/* ++++++++++++ */
+
+@media all and (max-width: 270px) {
+    /* ajout d'une pseudo-ligne gris clair sous le .nav "Hébergements" */
+    .header::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--light_grey);
+        bottom: 54px;
+        z-index: -1;
+    }
+    /* ------------------------------- */
+    /* La navigation passe en colonne */
+    /* ------------------------------- */
+    .header__nav {
+        padding-top: 40px;
+    }
+    .header__nav ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .header__nav li {
+        width: 100%;
+    }
+    .header__nav .nav {
+        padding: 16px 0px 20px 0px;
+    }
+
+    .section-one .section-one__accomm,
+    .section-one .section-one__aside {
+        padding: 40px 4%;
+    }
+    /* ------------------------------- */
+
+    /* ------------------------------------------------------------------ */
+    /* Pour forcer le contenu des cartes à se maintenir dans son conteneur */
+    /* ------------------------------------------------------------------ */
+    .card-accomm,
+    .card-popular,
+    .card-activ {
+        height: auto;
+    }
+    .card-accomm__text,
+    .card-popular__text,
+    .card-activ__text {
+        overflow: auto;
+    }
+    .star {
+        position: initial;
+    }
+    /* ------------------------------------------------------------------ */
+}

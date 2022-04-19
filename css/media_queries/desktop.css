@@ -1,0 +1,14 @@
+/* MODE DESKSTOP */
+
+@media all and (min-width: 1440px) {
+    .bloc-page,
+    .footer .bloc-page {
+        width: 1302px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .card-popular {
+        height: auto;
+    }
+}

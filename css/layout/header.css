@@ -1,0 +1,58 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* Barre de navigation */
+
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+/* logo Booki */
+.header img {
+    width: 90px;
+    position: relative;
+    left: 10px;
+    top: 34px;
+}
+
+.header__nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+}
+
+.header__nav {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.header__nav a {
+    display: inline-block;
+    padding: 40px 25px 20px 25px;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav::after {
+    content: "";
+    position: absolute;
+    border-top: 3px solid transparent;
+    top: 0;
+    left: 50%;
+    right: 100%;
+}
+
+

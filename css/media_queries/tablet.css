@@ -1,0 +1,71 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* MODE TABLETTES */
+
+@media all and (max-width: 992px) {
+    /* Arrangement de "hébergements" et "plus populaires" en colonne */
+    .section-one {
+        -ms-flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse;
+    }
+    /* Cartes "plus populaires" sur deux colonnes */
+    .card-popular {
+        width: 47%;
+        height: 160px;
+    }
+    /* --------------------------------------------------- */
+    /* Arrangement des cartes activités sur trois colonnes */
+    /* --------------------------------------------------- */
+    .section-two .activity {
+        -ms-flex-flow: row wrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        height: auto;
+        gap: 3rem;
+    }
+    .section-two .card-activ {
+        width: 30%;
+    }
+    .card-activ .card-activ__image {
+        height: 196px;
+    }
+    /* --------------------------------------------------- */
+}
+
+@media all and (max-width: 800px) {
+    /* -------------------------------------- */
+    /* cartes "hébergements" sur deux colonnes */
+    /* -------------------------------------- */
+    .card-accomm {
+        width: 46%;
+    }
+    /* -------------------------------------- */
+
+    /* --------------------------------------------- */
+    /* Arrangement des cartes activités en quinconce */
+    /* --------------------------------------------- */
+    .section-two .card-activ-1,
+    .section-two .card-activ-4,
+    .section-two .card-activ-5 {
+        -ms-flex-preferred-size: 60%;
+            flex-basis: 60%;
+    }
+    .section-two .card-activ-2,
+    .section-two .card-activ-3,
+    .section-two .card-activ-6 {
+        -ms-flex-preferred-size: 35%;
+            flex-basis: 35%;
+    }
+    /* --------------------------------------------- */
+}
